@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consulta de titulares</title>
+  <meta name="description" content="Base de html y css para la creación de sitios pertenecientes a la Administración Pública Nacional de la República Argentina.">
+  <meta name="author" content="Presidencia de la Nación">
+  <link rel="shortcut icon" href="poncho/favicon.ico">
+
+  <!-- Nav and address bar color -->
+  <meta name="theme-color" content="#0072b8">
+  <meta name="msapplication-navbutton-color" content="#0072b8">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#0072b8">
+
+  <link href="poncho/node_modules/argob-poncho/dist/css/roboto-fontface.css" rel="stylesheet">
+  <link href="poncho/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="poncho/node_modules/css/font-awesome.min.css" rel="stylesheet">
+  <link href="poncho/node_modules/argob-poncho/dist/css/poncho.css" rel="stylesheet">
+
+    <!--SEARCH-->
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+
+        $('.search-box input[type="text"]').on("keyup input", function(){
+            /* Get input value on lenght > 10 */
+            var inputVal = $(this).val();
+            var resultDropdown = $(this).siblings(".result");
+            if(inputVal.length > 7){
+                $.get("backend-search.php", {term: inputVal}).done(function(data){
+                    resultDropdown.html(data);
+                });
+            } else{
+                resultDropdown.empty();
+            }
+        });
+
+        
+        // Set search input value on click of result item
+        $(document).on("click", ".result p", function(){
+            $(this).parents(".search-box").find('input[type="text"]').val($(this).text());
+            $(this).parent(".result").empty();
+        });
+    });
+
+    </script>
+
+<!--SEARCH-->
+
+
+
+
+
+</head>
+
+  <body>
+
+    <header>
+  <nav class="navbar navbar-top navbar-default" role="navigation">
+    <div class="container">
+      <div>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img alt="Brand" src="poncho/img/argentinagob.svg" height="50">
+            <h1 class="sr-only">Argentina.gob.ar <small>Presidencia de la Nación</small>
+</h1>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="#">Consulta por DNI</a></li>  
+          </ul>
+        </div>
+
+        <!-- SEARCH FORM -->
+        <div id="search_wrapper" class="col-sm-6 col-sm-offset-3">
+          <span class="bg-primary">en: Modernización</span>
+          <div class="input-group stylish-input-group">
+            <input type="text" class="form-control" placeholder="Buscar trámites, servicios o áreas">
+            <span class="input-group-addon">
+              <button type="submit">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <main role="main">
+      <section class="jumbotron" style="background-image: url('img/modernizacion.jpg');">
+  <div class="jumbotron_bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ol class="breadcrumb pull-left">
+          <li><a href="">Consulta de titulares</a></li>
+            <li class="active"><span>Argentina Trabaja</span></li>
+          </ol>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron_body">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+          <h1>Portal de Consulta de Titulares</h1>
+          <p>Bienvenido al portal de consulta de titulares del programa Argentina Trabaja, ingresando tu DNI vas a poder acceder a fechas y sucursales de cobro.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay"></div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="row ">
+      <div class="col-lg-12">
+          <h2 class="h3 section-title text-center">Consultar por DNI</h2>
+          <!--INICIO-->
+                                <form>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group search-box">
+                                                <label></label>
+                                                <input type="text" class="form-control border-input text-center" placeholder="Ingresar DNI sin puntos" value="">
+                                                        <div class="row result"></div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </form>
+          <!--FIN-->
+
+
+      </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="modulo-contacto">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+          <h2 class="h3 section-title text-center">Datos de Contacto</h2>
+          <div>
+            <h5 class="text-center">Lorem ipsum dolor sit amet.</h5>
+            <p class="text-center">
+              <strong>Dirección:</strong> Av. Avenida 777<br>
+              <strong>Teléfono:</strong> (011) 5555-5555 / 4444-4444<br>
+              <strong>Correo electrónico:</strong> <a href="mailto:institucionales@modernizacion.gob.ar">mail@mail.com</a>
+            </p>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div>
+        <!--  <h2 class="h3 section-title text-center">Envianos tu consulta</h2>-->
+          <form>
+            <div class="form-group">
+            </div>
+          <!--    <button type="submit" class="btn btn-success btn-block">Enviar mi consulta</button>-->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    </main>
+    <footer class="main-footer text-center">
+  <div class="container text-center">
+    <div class="row text-center">
+      <div class="col-lg-12 text-center">
+        <img class="image-responsive text-center" alt="Argentina.gob.ar - Presidencia de la Nación" src="poncho/img/argentinagob.svg">
+        <br>
+        <p class="text-muted small">Los contenidos de Argentina.gob.ar están licenciados bajo <a href="https://creativecommons.org/licenses/by/2.5/ar/">Creative Commons Reconocimiento 2.5 Argentina License</a></p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+
+
+    <script src="poncho/node_modules/jquery/dist/jquery.js"></script>
+    <script src="poncho/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

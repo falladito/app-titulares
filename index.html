@@ -1,0 +1,496 @@
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consulta de titulares</title>
+  <meta name="description" content="Portal de consulta de titulares de programas sociales de la República Argentina.">
+  <meta name="author" content="Presidencia de la Nación">
+  <link rel="shortcut icon" href="poncho/favicon.ico">
+
+  <!-- Nav and address bar color -->
+  <meta name="theme-color" content="#0072b8">
+  <meta name="msapplication-navbutton-color" content="#0072b8">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#0072b8">
+
+  <link href="poncho/node_modules/argob-poncho/dist/css/roboto-fontface.css" rel="stylesheet">
+  <link href="poncho/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="poncho/node_modules/css/font-awesome.min.css" rel="stylesheet">
+  <link href="poncho/node_modules/argob-poncho/dist/css/poncho.css" rel="stylesheet">
+</head>
+
+  <body>
+
+    <header>
+  <nav class="navbar navbar-top navbar-default" role="navigation">
+    <div class="container">
+      <div>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img alt="Brand" src="poncho/img/argentinagob.svg" height="50">
+            <h1 class="sr-only">Argentina.gob.ar <small>Presidencia de la Nación</small>
+</h1>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="consulta.html">Consulta por DNI</a></li>  
+          </ul>
+        </div>
+
+        <!-- SEARCH FORM -->
+        <div id="search_wrapper" class="col-sm-6 col-sm-offset-3">
+          <span class="bg-primary">en: Modernización</span>
+          <div class="input-group stylish-input-group">
+            <input type="text" class="form-control" placeholder="Buscar trámites, servicios o áreas">
+            <span class="input-group-addon">
+              <button type="submit">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <main role="main">
+      <section class="jumbotron" style="background-image: url('img/modernizacion.jpg');">
+  <div class="jumbotron_bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ol class="breadcrumb pull-left">
+          <li><a href="">Consulta de titulares</a></li>
+            <li class="active"><span>Argentina Trabaja</span></li>
+          </ol>
+        <!--   <ul class="list-inline pull-right">
+            <li><a href="#" class="search"><i class="glyphicon glyphicon-search"></i>Buscar en el área</a></li>
+            <li><a href="#">Institucional</a></li>-->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron_body">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+          <h1>Portal de Consulta de Titulares</h1>
+          <p>Bienvenido al portal de consulta de titulares del programa Argentina Trabaja, ingresando tu DNI vas a poder acceder a fechas y sucursales de cobro.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay"></div>
+</section>
+
+
+<!-- <section>
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-12">
+          <h2 class="h3 section-title">Links no destacados</h2>
+      </div>
+    </div>
+    <div class="row panels-row">
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default" href="#">
+          <div class="panel-body">
+            <h3>Lorem ipsum dolor sit</h3>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default" href="#">
+          <div class="panel-body">
+            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing</h3>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default" href="#">
+          <div class="panel-body">
+            <h3>Lorem ipsum dolor sit amet</h3>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default" href="#">
+          <div class="panel-body">
+            <h3>Lorem ipsum dolor sit</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <a class="btn btn-primary">Lorem ipsum dolor sit amet, consectetur adipis</a>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- <section>
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-12">
+        <h2 class="h3 section-title">Links no destacados con descripción</h2>
+      </div>
+    </div>
+    <div class="row panels-row">
+      <div class="col-sm-6 col-md-4">
+        <a class="panel panel-default" href="#">
+          <div class="panel-body">
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p class="text-muted">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <a class="panel panel-default" href="#">
+          <div class="panel-body">
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p class="text-muted">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <a class="panel panel-default" href="#">
+          <div class="panel-body">
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p class="text-muted">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <a class="btn btn-primary">Lorem ipsum dolor sit amet, consectetur adipisicing.</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+ -->
+<section>
+  <div class="container">
+
+    <div class="row ">
+      <div class="col-lg-12">
+          <h2 class="h3 section-title text-center">Consultar información de titulares</h2>
+                  <a class="btn btn-primary btn-block" href="consulta.html">Consultar por DNI</a>
+                  <br>
+      </div>
+      </div>
+
+
+    <div class="row ">
+      <div class="col-lg-12">
+          <h2 class="h3 section-title text-center">Links destacados con iconos y descripción</h2>
+      </div>
+    </div>
+    <div class="row panels-row">
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default panel-icon" href="#">
+          <div class="panel-heading"><i class="fa fa-file"></i></div>
+          <div class="panel-body">
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p class="text-muted">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default panel-icon" href="#">
+          <div class="panel-heading"><i class="fa fa-flask"></i></div>
+          <div class="panel-body">
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p class="text-muted">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default panel-icon" href="#">
+          <div class="panel-heading"><i class="fa fa-file"></i></div>
+          <div class="panel-body">
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p class="text-muted">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default panel-icon" href="#">
+          <div class="panel-heading"><i class="fa fa-cube"></i></div>
+          <div class="panel-body">
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p class="text-muted">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+       </div>
+
+  </div>
+</section>
+
+<!-- <section>
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-12">
+          <h2 class="h3 section-title">Links destacados con fotos</h2>
+      </div>
+    </div>
+    <div class="row panels-row">
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default" href="#">
+          <div style="background-image:url('./img/placeholder.png');" class="panel-heading"></div>
+          <div class="panel-body">
+            <h3>Lorem ipsum dolor sit.</h3>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default" href="#">
+          <div style="background-image:url('./img/placeholder.png');" class="panel-heading"></div>
+          <div class="panel-body">
+            <h3>Lorem ipsum dolor sit.</h3>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default" href="#">
+          <div style="background-image:url('./img/placeholder.png');" class="panel-heading"></div>
+          <div class="panel-body">
+            <h3>Lorem ipsum dolor sit.</h3>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default" href="#">
+          <div style="background-image:url('./img/placeholder.png');" class="panel-heading"></div>
+          <div class="panel-body">
+            <h3>Lorem ipsum dolor sit.</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-12">
+        <h2 class="h3 section-title">Noticias Destacadas</h2>
+      </div>
+    </div>
+    <div class="row panels-row">
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default panel-md" href="#">
+          <div style="background-image:url('img/placeholder.png');" class="panel-heading"></div>
+          <div class="panel-body">
+            <time>Jueves 14 de Enero del 2016</time>
+            <h3>El Ministro Buryaile asistió a la apertura de la Semana Verde Internacional, en Berlín</h3>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default panel-md" href="#">
+          <div style="background-image:url('./img/placeholder.png');" class="panel-heading"></div>
+          <div class="panel-body">
+            <time>Jueves 14 de Enero del 2016</time>
+            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default panel-md" href="#">
+          <div style="background-image:url('./img/placeholder.png');" class="panel-heading"></div>
+          <div class="panel-body">
+            <time>Jueves 14 de Enero del 2016</time>
+            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default panel-md" href="#">
+          <div style="background-image:url('./img/placeholder.png');" class="panel-heading"></div>
+          <div class="panel-body">
+            <time>Jueves 14 de Enero del 2016</time>
+            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <a class="btn btn-primary">Ver todas las noticias</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray modulo-mapaestado">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="h3 section-title">Ministro</h2>
+      </div>
+    </div>
+
+    <div class="row margin-20">
+      <div class="col-xs-12 col-sm-3 col-md-2">
+        <img class="img-responsive img-rounded" alt="" src="poncho/img/ministro_placeholder.jpg">
+      </div>
+      <div class="col-xs-12 col-sm-9 col-md-10">
+        <h2>Juan Perez<br><small>Lorem ipsum dolor sit amet</small>
+</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, nihil maiores, rem itaque laborum voluptas temporibus quod vel recusandae ab repudiandae nesciunt corrupti incidunt, in. Veniam sit voluptate quisquam culpa?</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="h3 section-title">Secretarios</h2>
+      </div>
+    </div>
+
+    <div class="row panels-row">
+      <div class="col-sm-6 col-md-3">
+        <div class="panel panel-disabled">
+          <div class="panel-body">
+            <h4>Lorem ipsum dolor sit amet</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default" href="#">
+          <div class="panel-body">
+            <h4>Lorem ipsum dolor sit amet</h4>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default" href="#">
+          <div class="panel-body">
+            <h4>Lorem ipsum dolor sit amet</h4>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default" href="#">
+          <div class="panel-body">
+            <h4>Lorem ipsum dolor sit amet</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="h3 section-title">Subsecretarios</h2>
+      </div>
+    </div>
+
+    <div class="row panels-row">
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default" href="#">
+          <div class="panel-body">
+            <h4>Lorem ipsum dolor sit amet</h4>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="panel panel-disabled">
+          <div class="panel-body">
+            <h4>Lorem ipsum dolor sit amet</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="panel panel-disabled">
+          <div class="panel-body">
+            <h4>Lorem ipsum dolor sit amet</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default" href="#">
+          <div class="panel-body">
+            <h4>Lorem ipsum dolor sit amet</h4>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a class="panel panel-default" href="#">
+          <div class="panel-body">
+            <h4>Lorem ipsum dolor sit amet</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="modulo-contacto">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+          <h2 class="h3 section-title text-center">Datos de Contacto</h2>
+          <div>
+            <h5 class="text-center">Lorem ipsum dolor sit amet.</h5>
+            <p class="text-center">
+              <strong>Dirección:</strong> Av. Avenida 777<br>
+              <strong>Teléfono:</strong> (011) 5555-5555 / 4444-4444<br>
+              <strong>Correo electrónico:</strong> <a href="mailto:institucionales@modernizacion.gob.ar">mail@mail.com</a>
+            </p>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div>
+        <!--  <h2 class="h3 section-title text-center">Envianos tu consulta</h2>-->
+          <form>
+            <div class="form-group">
+            </div>
+          <!--    <button type="submit" class="btn btn-success btn-block">Enviar mi consulta</button>-->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    </main>
+    <footer class="main-footer text-center">
+  <div class="container text-center">
+    <div class="row text-center">
+      <div class="col-lg-12 text-center">
+        <img class="image-responsive text-center" alt="Argentina.gob.ar - Presidencia de la Nación" src="poncho/img/argentinagob.svg">
+        <br>
+        <p class="text-muted small">Los contenidos de Argentina.gob.ar están licenciados bajo <a href="https://creativecommons.org/licenses/by/2.5/ar/">Creative Commons Reconocimiento 2.5 Argentina License</a></p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+
+
+    <script src="poncho/node_modules/jquery/dist/jquery.js"></script>
+    <script src="poncho/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
