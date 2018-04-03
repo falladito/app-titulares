@@ -55,8 +55,8 @@
                       <hr>
                       <p class="h3"><strong> Fecha de cobro: 06/04/2018</strong></p>
                       <p class="h3"><strong> Sucursal: San telmo</strong></p>
-                      <p class="h3"><strong> Tipo de Persona: San telmo</strong></p>
-                      <p class="h3"><strong> Estado: San telmo</strong></p>
+                      <p class="h3"><strong> Tipo de Persona: Asociado</strong></p>
+                      <p class="h3"><strong> Estado: Efector</strong></p>
                       <p class="h3"><strong> Fecha último cobro: 2018-05</strong></p>
 
                     </div>
