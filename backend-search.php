@@ -3,7 +3,7 @@
 
     try{
 
-        $pdo = new PDO("mysql:host=localhost;dbname=titulares", "root", "root");
+        $pdo = new PDO("mysql:host=;dbname=", "", "");
 
         // Set the PDO error mode to exception
 
