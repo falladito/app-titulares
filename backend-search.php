@@ -3,7 +3,7 @@
 
     try{
 
-        $pdo = new PDO("mysql:host=localhost;dbname=titulares", "root", "root");
+        $pdo = new PDO("mysql:host=;dbname=", "", "");
 
         // Set the PDO error mode to exception
 
@@ -77,11 +77,6 @@
             if($stmt->rowCount() > 0){ 
 
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-           /* echo $result[0]['nombres'].' '.$result[0]['apellido'].'</br>';
-            echo $result[0]['dni'].'</br>';
-            echo 'Fecha Nac: '. $result[0]['fecha_nacimiento'].'</br>';
-            echo 'Sucursal: '. $result[0]['sucursal'].'</br></br></br>';*/
 
             echo '</br>
                   <div class="col-lg-12">
